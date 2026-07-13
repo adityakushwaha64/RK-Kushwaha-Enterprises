@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RK Kushwaha Enterprises | Structural Engineering Experts</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#babad5;
+    color:#283347;
+    line-height:1.8;
+    scroll-behavior:smooth;
+}
+
+/* ================= HEADER ================= */
+header{
+    position:fixed;
+    top:0;left:0;width:100%;
+    z-index:999;
+    backdrop-filter:blur(12px);
+    background:rgba(218, 218, 219, 0.9);
+    border-bottom:1px solid #2563eb;
+    transition:.4s;
+}
+header.scrolled{
+    box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:22px;
+    font-weight:900;
+    color:#38bdf8;
+}
+.logo img{
+    width:42px;
+    height:42px;
+    border-radius:8px;
+}
+.nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+.nav a{
+    color:#e5e7eb;
+    font-weight:600;
+    text-transform:uppercase;
+    transition:.3s;
+}
+.nav a:hover{color:#38bdf8}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(to bottom, rgba(213, 214, 219, 0.4), rgba(15,23,42,.9)),
+    url("Steel-structure-erection-2.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+.hero-box{
+    max-width:900px;
+    transition:transform .15s ease-out;
+}
+.hero-badge{
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:30px;
+    background:rgba(37,99,235,.15);
+    border:1px solid #2563eb;
+    color:#38bdf8;
+    font-weight:700;
+    margin-bottom:25px;
+}
+.hero h1{
+    font-size:3.6rem;
+    background:linear-gradient(90deg,#2563eb,#06b6d4,#38bdf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.hero p{
+    font-size:1.2rem;
+    color:#cbd5f5;
+    margin:20px 0 35px;
+}
+.btn{
+    padding:14px 34px;
+    border-radius:30px;
+    font-weight:800;
+    display:inline-block;
+    margin:8px;
+    transition:.3s;
+}
+.primary{
+    background:#38bdf8;
+    color:#020617;
+}
+.primary:hover{background:#06b6d4}
+.secondary{
+    border:2px solid #38bdf8;
+    color:#e5e7eb;
+}
+.secondary:hover{
+    background:#38bdf8;
+    color:#020617;
+}
+
+/* ================= ABOUT ================= */
+.about{
+    padding:140px 20px;
+    background:#020617;
+}
+.about-container{
+    max-width:900px;
+    margin:auto;
+}
+.about-card{
+    background:#111827;
+    border:1px solid rgba(37,99,235,.6);
+    border-radius:22px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    transition:.4s;
+}
+.about-card:hover{transform:translateY(-10px)}
+.about-badge{
+    display:inline-block;
+    padding:8px 22px;
+    border-radius:20px;
+    background:rgba(37,99,235,.15);
+    border:1px solid #2563eb;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+.about-heading{
+    font-size:2.6rem;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:20px;
+}
+.about-description{
+    font-size:1.1rem;
+    color:#cbd5f5;
+}
+
+/* ================= SERVICES ================= */
+.services{
+    padding:120px 20px;
+}
+.services h2{
+    text-align:center;
+    font-size:2.8rem;
+    margin-bottom:60px;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.service-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+.service{
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(37,99,235,.6);
+    text-align:center;
+    transition:.4s;
+}
+.service:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+.service i{
+    font-size:42px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+/* ================= PROJECTS ================= */
+.projects{
+    padding:120px 20px;
+    background:#020617;
+}
+.projects h2{
+    text-align:center;
+    font-size:2.8rem;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.projects .subtitle{
+    max-width:900px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:#cbd5f5;
+}
+.project-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+.project-card{
+    background:#111827;
+    border-radius:18px;
+    border:1px solid rgba(37,99,235,.6);
+    overflow:hidden;
+    transition:.4s;
+}
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(0,0,0,.6);
+}
+.project-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.project-content{
+    padding:25px;
+    text-align:center;
+}
+.project-tag{
+    display:inline-block;
+    margin-top:12px;
+    padding:6px 16px;
+    border-radius:20px;
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+    font-size:.8rem;
+}
+
+/* ================= CONTACT ================= */
+.contact{
+    padding:150px 20px;
+}
+.contact h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:60px;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.contact-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+}
+input,textarea{
+    width:100%;
+    padding:18px;
+    background:#111827;
+    border:1px solid rgba(37,99,235,.6);
+    border-radius:12px;
+    color:#e5e7eb;
+    margin-bottom:18px;
+}
+.contact-info p{
+    margin-bottom:18px;
+    font-size:1.1rem;
+}
+.contact-info i{
+    color:#38bdf8;
+    margin-right:10px;
+}
+.social a{
+    font-size:22px;
+    margin-right:15px;
+    color:#38bdf8;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#020617;
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #2563eb;
+    color:#cbd5f5;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .hero h1{font-size:2.3rem}
+    .contact-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+<div class="nav">
+<div class="logo">
+<img src="WhatsApp Image 2026.jpeg" alt="Logo">
+<span>RK Kushwaha Enterprises</span>
+</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-box">
+<div class="hero-badge">Structural Fabrication & Erection Experts</div>
+<h1>RK Kushwaha Enterprises</h1>
+<p>Delivering high-precision steel structures and industrial engineering solutions across India.</p>
+<a href="#contact" class="btn primary">Get Project Quote</a>
+<a href="#services" class="btn secondary">Our Expertise</a>
+</div>
+</section>
+
+<div class="leadership">
+<h3>Company Leadership</h3>
+<div class="team-grid">
+<div class="member"><img src="IMG_1283.PNG"><h4>Radhesyam Kushwaha</h4><p>Founder & CEO</p></div>
+</div>
+</div>
+</div>
+</section>
+<style>
+/* ===============================
+   LEADERSHIP CARD DESIGN
+================================ */
+.leadership{
+    margin-top:70px;
+    background:#60656e;
+    padding:60px 40px;
+    border-radius:24px;
+    border:1px solid rgba(37,99,235,.6);
+}
+
+.leadership h3{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:40px;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* ===============================
+   MEMBER CARD
+================================ */
+.member{
+    background:#020617;
+    padding:35px 30px;
+    border-radius:22px;
+    text-align:center;
+    border:1px solid rgba(37,99,235,.6);
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+    opacity:0;
+    transform:translateY(80px);
+    transition:all .9s ease-out;
+    position:relative;
+    overflow:hidden;
+}
+
+.member.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===============================
+   IMAGE STYLE + ANIMATION
+================================ */
+.member img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    margin-bottom:18px;
+    transition:all .6s ease;
+    animation:floatImg 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floatImg{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0)}
+}
+
+/* Hover effects */
+.member:hover img{
+    transform:scale(1.12);
+    box-shadow:0 0 30px rgba(56,189,248,.8);
+}
+
+/* ===============================
+   TEXT STYLE
+================================ */
+.member h4{
+    font-size:1.3rem;
+    color:#38bdf8;
+    margin-bottom:6px;
+}
+
+.member p{
+    color:#cbd5f5;
+    font-size:1rem;
+    letter-spacing:.5px;
+}
+
+/* Glow border on hover */
+.member::before{
+    content:" ";
+    position:absolute;
+    inset:0;
+    border-radius:22px;
+    border:2px solid transparent;
+    transition:.4s;
+}
+
+.member:hover::before{
+    border-color:#38bdf8;
+}
+</style>
+<script>
+const members = document.querySelectorAll(".member");
+
+const memberObserver = new IntersectionObserver(
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},
+{ threshold:0.3 });
+
+members.forEach(member=>{
+    memberObserver.observe(member);
+});
+</script>
+
+<div class="leader-card">
+    <div class="leader-image">
+        <img src="IMG_1283.PNG" alt="Radhesyam Kushwaha">
+    </div>
+
+    <div class="leader-content">
+        <h4>Radhesyam Kushwaha</h4>
+        <span class="leader-role">
+            Founder & Chief Executive Officer (CEO)
+        </span>
+
+        <p class="leader-desc">
+            <strong>Radhesyam Kushwaha</strong> is the Founder and Chief Executive Officer of 
+            <strong>RK Kushwaha Enterprises</strong>, a trusted name in structural steel
+            fabrication and erection. With a strong foundation in engineering,
+            safety, and quality standards, he has successfully led large-scale
+            industrial sheds, warehouses, pre-engineered buildings, and heavy
+            structural projects across India.
+        </p>
+    </div>
+</div>
+<style>
+    .leader-card{
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    align-items: center;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.leader-image{
+    flex: 0 0 220px;
+    position: relative;
+}
+
+.leader-image img{
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 4px solid #00c6ff;
+    box-shadow: 0 15px 40px rgba(0,198,255,0.4);
+}
+
+.leader-content{
+    color: #ffffff;
+}
+
+.leader-content h4{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.leader-role{
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00c6ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.leader-desc{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dcdcdc;
+}
+
+/* Hover Effect */
+.leader-card:hover{
+    transform: translateY(-8px);
+    transition: 0.4s ease;
+}
+
+/* Animation */
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .leader-card{
+        flex-direction: column;
+        text-align: center;
+    }
+    .leader-image img{
+        width: 200px;
+        height: 240px;
+    }
+}
+</style>
+<!-- Projects -->
+<section class="projects" id="projects">
+<div class="container">
+<h2>Major Projects Executed</h2>
+
+<p class="subtitle">
+RK Kushwaha Enterprises has successfully delivered multiple high-value industrial and commercial structural projects across India, demonstrating engineering strength, execution excellence, and long-term durability.
+</p>
+
+<div class="project-grid">
+
+<a href="project-warehoue.html" class="project-link">
+<div class="project-card">
+    <img src="Structural-Fabrication-Erection-1-1.jpg" alt="">
+    <div class="project-content">
+        <h3>Large Industrial Warehouse</h3>
+        <p>Complete structural fabrication and erection of a heavy-duty warehouse including roofing, cladding, and load-tested steel framework.</p>
+        <span class="project-tag">Industrial Structure</span>
+    </div>
+</div>
+</a>
+
+<a href="project-manufacturing.html" class="project-link">
+<div class="project-card">
+    <img src="steel-erection-service-873.jpg" alt="">
+    <div class="project-content">
+        <h3>Manufacturing Plant Shed</h3>
+        <p>Turnkey execution of fabrication, erection, and industrial shed roofing for a high-capacity manufacturing unit.</p>
+        <span class="project-tag">Factory Shed</span>
+    </div>
+</div>
+</a>
+
+<a href="project-commercial.html" class="project-link">
+<div class="project-card">
+    <img src="steel-erection-work-services-350.jpg" alt="">
+    <div class="project-content">
+        <h3>Commercial Steel Building</h3>
+        <p>Multi-storey commercial steel structure completed with strict safety, quality control, and tight project deadlines.</p>
+        <span class="project-tag">Commercial Project</span>
+    </div>
+</div>
+</a>
+
+<a href="project-heavy.html" class="project-link">
+<div class="project-card">
+    <img src="structural-steel-erection-services.jpg" alt="">
+    <div class="project-content">
+        <h3>Heavy Structural Erection</h3>
+        <p>Erection of heavy structural components for industrial machinery support using advanced lifting and alignment techniques.</p>
+        <span class="project-tag">Heavy Engineering</span>
+    </div>
+</div>
+</a>
+
+<a href="project-peb.html" class="project-link">
+<div class="project-card">
+    <img src="structure-erection-work.jpg" alt="">
+    <div class="project-content">
+        <h3>Pre-Engineered Building (PEB)</h3>
+        <p>Design-coordinated fabrication and erection of a PEB structure ensuring cost efficiency, speed, and long service life.</p>
+        <span class="project-tag">PEB Structure</span>
+    </div>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+<style>
+    /* PROJECTS SECTION */
+.projects{
+    background:#f4f7fb;
+    padding:80px 0;
+}
+
+.projects h2{
+    color:#0c2740;           /* Slightly darker for better focus */
+    font-size:36px;
+    margin-bottom:14px;
+    font-weight:700;
+}
+
+.projects .subtitle{
+    color:#465a70;           /* Improved contrast */
+    max-width:900px;
+    margin:auto;
+    font-size:16px;
+    line-height:1.75;
+}
+
+/* PROJECT CARD */
+.project-card{
+    background:#ffffff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    transition:0.4s ease;
+}
+
+/* CONTENT */
+.project-content{
+    padding:26px;
+}
+
+.project-content h3{
+    color:#0f2e4a;           /* Stronger heading */
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:#55697d;           /* Better readability */
+    font-size:15px;
+    line-height:1.65;
+    margin-bottom:16px;
+}
+
+/* TAG */
+.project-tag{
+    display:inline-block;
+    padding:6px 16px;
+    font-size:12px;
+    font-weight:600;
+    color:#0b5ed7;
+    background:rgba(11,94,215,0.12);
+    border-radius:20px;
+}
+
+/* LINK FIX */
+.project-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+/* HOVER – SUBTLE ONLY */
+.project-card:hover h3{
+    color:#0b5ed7;
+}
+
+.project-card:hover{
+    box-shadow:0 28px 55px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   PROJECT SCROLL ANIMATION
+================================ */
+.project-card{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 0.9s ease-out;
+}
+
+.project-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+<script>
+/* PROJECT CARD SCROLL ANIMATION */
+const projectCards = document.querySelectorAll(".project-card");
+
+const projectObserver = new IntersectionObserver(
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+},
+{
+    threshold:0.2
+});
+
+projectCards.forEach(card=>{
+    projectObserver.observe(card);
+});
+</script>
+
+
+
+
+<section class="about" id="about">
+<div class="about-container">
+<div class="about-card">
+<div class="about-badge">About Company</div>
+<h2 class="about-heading">RK Kushwaha Enterprises</h2>
+<p class="about-description">
+RK Kushwaha Enterprises is a distinguished and trusted organization in the field of structural steel fabrication and erection, recognized for delivering robust, reliable, and high-performance steel solutions. With a strong foundation built on technical expertise and industry experience, we specialize in the execution of industrial sheds, large-scale warehouses, pre-engineered buildings, and heavy structural frameworks.
+</p>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<h2>Our Core Services</h2>
+<section class="services" id="services">
+<h2>Our Core Services</h2>
+
+<div class="service-grid">
+
+<a href="steel-fabrication.html" class="service">
+    <i class="fas fa-industry"></i>
+    <h3>Steel Fabrication</h3>
+    <p>Precision cutting, welding & assembly</p>
+</a>
+
+<a href="structural-erection.html" class="service">
+    <i class="fas fa-building"></i>
+    <h3>Structural Erection</h3>
+    <p>Safe & accurate on-site installation</p>
+</a>
+
+<a href="industrial-sheds.html" class="service">
+    <i class="fas fa-warehouse"></i>
+    <h3>Industrial Sheds</h3>
+    <p>Heavy-duty & custom-built sheds</p>
+</a>
+
+</div>
+</section>
+<style>
+    .service{
+    text-decoration:none;
+    color:#e5e7eb;
+    cursor:pointer;
+}
+.service p{
+    margin-top:10px;
+    color:#cbd5f5;
+    font-size:.95rem;
+}
+</style>
+
+
+
+
+</section>
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<div class="contact-grid">
+<div>
+<input placeholder="Your Name">
+<input placeholder="Your Email">
+<textarea rows="6" placeholder="Project Details"></textarea>
+<button class="btn primary">Send Enquiry</button>
+</div>
+<div class="contact-info">
+<p><i class="fas fa-envelope"></i> info@rkkushwaha.com</p>
+<p><i class="fas fa-phone"></i> +91 12345 67890</p>
+<p><i class="fas fa-location-dot"></i> India</p>
+<div class="social">
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 RK Kushwaha Enterprises | Engineering Excellence
+</footer>
+
+<script>
+/* HERO MOVEMENT */
+const heroBox=document.querySelector(".hero-box");
+document.addEventListener("mousemove",e=>{
+ const x=(window.innerWidth/2-e.clientX)/30;
+ const y=(window.innerHeight/2-e.clientY)/30;
+ heroBox.style.transform=`translate(${x}px,${y}px)`;
+});
+
+/* HEADER SHADOW */
+window.addEventListener("scroll",()=>{
+ document.getElementById("header")
+ .classList.toggle("scrolled",window.scrollY>50);
+});
+</script>
+
+</body>
+</html>
